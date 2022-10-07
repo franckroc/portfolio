@@ -1,4 +1,4 @@
-body { background: url("../img/blackBG.jpg"); }
+body { background-image: url("blackBG.jpg"); }
 
 #navigate .menu {
 color:rgb(8, 180, 211);
