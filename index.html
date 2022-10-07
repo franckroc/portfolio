@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Préchargement du script JS -->
+    <link rel="preload" href="./main.js" as="script">
+    <title>Ma page d'accueil</title>
+</head>
+
+<body>
+    
+    <!-- barre de navigation -->
+        <script src="main.js"></script>
+
+        <div id="navigate">
+            <div class="menu">
+                <li onclick="displayText()">PROFIL</li>
+            </div>
+
+            <div class="menu">
+                <li onclick="displayCv()">CV</li>
+            </div>
+
+            <div class="menu">
+                <li>PROJETS</li>
+            </div>
+
+            <div class="menu">
+                <li>REALISATIONS</li>
+            </div>
+
+            <div class="menu">
+                <li onclick="mailing()">Contact</li>
+            </div>
+        </div>
+
+        <div id="monprofil" style="display:none;">
+            <p>
+            En reconversion professionnelle, je me forme au métier de
+            développeur d'applications. Je suis curieux et volontaire,
+            créatif et passionné. Je code depuis mon adolescence en parallèle
+            d'une première partie de carrière tournée vers la relation d'aide.
+            Je me forme aux langages Python et PHP pour le <em>Back</em> et au
+            HTML5 / CSS3 / JS pour la partie <em>Front</em>. J'utilise également MySQL
+            et les frameworks <em>Django / react.Js</em> et le CRM Bootstrap 5 pour le 
+            développement Web.
+            </p>
+            <p class="t2">
+            Je recherche un emploi en alternance en contrat de professionnalisation
+            pour articuler mes connaissances avec une pratique professionnelle.
+            Je recherche le travail d'équipe mais je sais aussi être autonome.
+            Je suis véhiculé et disponible de suite à temps plein."
+            </p>
+        </div>
+
+        <div id="moncv" style="display:none;">
+            <object type="application/pdf"
+                    data="cv.pdf"
+                    width="900"
+                    height="800">
+            </object>
+        </div>
+
+        <div id="mail" style="display:none;">
+            <div class="message">
+                <li id="name">Franck ROCHETTE</li> 
+                <li id="tel">06.22.98.53.37</li>
+                <a id="msg" href="mailto:rochette.franck@gmail.com">Message</a>
+            </div>
+        </div>
+
+<footer></footer>
+
+</body>
+</html>

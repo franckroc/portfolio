@@ -1,0 +1,101 @@
+body { background: url("/img/blackBG.jpg"); }
+
+#navigate .menu {
+color:rgb(8, 180, 211);
+font-size: 2rem;
+list-style-type: none;
+text-align: center;
+position: relative;
+margin-top: 2rem;
+margin-left: 14rem;
+width: 5rem;
+height: 2rem;
+line-height: 3rem;
+float: left;
+font-family:"sans serif", "Times New Roman", "serif"; }
+
+#navigate .menu li {
+    border: 1px solid rgba(8, 180, 211, 0);
+    width: 16rem;
+    text-decoration:none;  }
+
+#navigate .menu li:hover {
+background-image: linear-gradient(to bottom right,
+    yellow 25%,
+    black 50%,
+    blue 75% );
+text-align: center;
+color:white;
+display: block;
+width: 16rem;
+line-height: 3rem;
+border: none; }
+
+.menu #contacts {
+    display: inline-block;
+    color:rgb(8, 180, 211);
+    position: absolute;
+    font-size: 2rem;
+    padding-left: 105rem;
+    padding-top: 2.3rem;
+    list-style-type: none; }
+
+.menu #contacts:hover {  opacity: 0.6  }
+
+#monprofil {
+    position: absolute;
+    top: 7rem;
+    left: 14rem;
+    color: #dd8b10ee;
+    padding-left: 0.5rem;
+    width: 15rem;
+    height: 46rem;
+    letter-spacing: 0.05em;  }
+    
+#monprofil p {
+    font-size: 1.2rem;
+    width: 25rem;  }
+    
+#monprofil .t2 {
+        font-weight: bolder;  }
+
+#moncv {
+    position: relative;
+    left: 30rem;
+    top: 3rem; }
+
+#mail {
+    font-size: 2rem;
+    position:relative;
+    top: 3rem;
+    left: 12rem;
+    color: white;
+    overflow: visible;  }
+
+#mail .message {
+    position: absolute;
+    font-size: 5rem;
+    left:28rem;
+    top: 10rem;
+    text-align: center;
+    vertical-align: middle;
+    list-style-type: none;  }
+
+#mail .message #name {
+    background-image: linear-gradient(to bottom right,
+    rgba(255, 255, 0, 0.74) 25%,
+    black 50%,
+    blue 75% );
+    animation: clignote 1.5s ease-in infinite;  }
+
+#mail .message #tel { text-decoration: underline;  }
+
+#mail .message #msg {  
+    position: absolute;
+    left: 12rem;
+    top: 25rem;
+    text-decoration: none ;  }
+
+@keyframes clignote {  
+  50% { opacity: 0.3; }
+}
