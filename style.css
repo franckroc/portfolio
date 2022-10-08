@@ -1,62 +1,62 @@
-body { background-image: url("blackBG.jpg"); }
+body { 
+    background-image: url("blackBG.jpg"); 
+}
 
-#navigate .menu {
-color:rgb(8, 180, 211);
-font-size: 2rem;
-list-style-type: none;
-text-align: center;
-position: relative;
-margin-top: 2rem;
-margin-left: 14rem;
-width: 5rem;
-height: 2rem;
-line-height: 3rem;
-float: left;
-font-family:"sans serif", "Times New Roman", "serif"; }
+.menu1 {
+    display: inline-block;
+    color:rgb(8, 180, 211);
+    font-size: 2rem;
+    list-style-type: none;
+    text-align: center;
+    font-family:"sans serif", "Times New Roman", "serif"; 
+}
 
-#navigate .menu li {
-    border: 1px solid rgba(8, 180, 211, 0);
-    width: 16rem;
-    text-decoration:none;  }
+.menu1 li {
+    display: inline-block;
+    line-height: 5rem;
+    width:16rem; 
+}
 
-#navigate .menu li:hover {
-background-image: linear-gradient(to bottom right,
+.menu1 #realisation {
+    display: inline-block;
+    margin-left: 5rem;
+}
+
+.menu1 li:hover {
+    display: inline-block;
+    background-image: linear-gradient(to bottom right,
     yellow 25%,
     black 50%,
     blue 75% );
-text-align: center;
-color:white;
-display: block;
-width: 16rem;
-line-height: 3rem;
-border: none; }
+    color:white;
+}
 
-.menu #contacts {
+.menu2 {
     display: inline-block;
-    color:rgb(8, 180, 211);
-    position: absolute;
+    color:rgb(255, 255, 255);
     font-size: 2rem;
-    padding-left: 105rem;
-    padding-top: 2.3rem;
+    padding-left: 8rem;
+
+    margin:0;
     list-style-type: none; }
 
-.menu #contacts:hover {  opacity: 0.6  }
+.menu2 li:hover {  
+    opacity: 0.5;
+}
 
 #monprofil {
-    position: absolute;
-    top: 7rem;
-    left: 14rem;
+    display:flex;
+    margin: 3rem;
     color: #dd8b10ee;
-    padding-left: 0.5rem;
-    width: 15rem;
-    height: 46rem;
-    letter-spacing: 0.05em;  }
+    padding-left: 1.5rem;    
+}
     
 #monprofil p {
-    font-size: 1.2rem;
-    width: 25rem;  }
+    font-size: 1.5rem;
+    width: 35rem;
+}
     
-#monprofil .t2 {
+#monprofil #t2 {
         font-weight: bolder;  }
 
 #moncv {
@@ -97,5 +97,5 @@ border: none; }
     text-decoration: none ;  }
 
 @keyframes clignote {  
-  50% { opacity: 0.3; }
+    50% { opacity: 0.3; }
 }
