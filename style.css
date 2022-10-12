@@ -1,9 +1,19 @@
 body { 
     background-image: url("blackBG.jpg"); 
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 5px;
+    margin: 0;
 }
 
-.menu1 {
-    display: inline-block;
+/* menu navigation */
+.menu {
+    display: inline;
+    padding:20px;
+    width: 200px;
+}
+.menu li{
+    display: inline;
     color:rgb(8, 180, 211);
     font-size: 2rem;
     list-style-type: none;
@@ -11,91 +21,101 @@ body {
     font-family:"sans serif", "Times New Roman", "serif"; 
 }
 
-.menu1 li {
-    display: inline-block;
-    line-height: 5rem;
-    width:16rem; 
-}
-
-.menu1 #realisation {
-    display: inline-block;
-    margin-left: 5rem;
-}
-
-.menu1 li:hover {
-    display: inline-block;
+.menu li:hover {
     background-image: linear-gradient(to bottom right,
     yellow 25%,
     black 50%,
     blue 75% );
     color:white;
 }
-
+    /* style particulier contacts */
 .menu2 {
-    display: inline-block;
+    display:block;
+    float: right;
+    padding-right: 15px;
     color:rgb(255, 255, 255);
     font-size: 2rem;
-    padding-left: 8rem;
-
-    margin:0;
-    list-style-type: none; }
-
+    list-style-type: none; 
+}
 .menu2 li:hover {  
     opacity: 0.5;
 }
 
+/* fenetres animations */
+.container {
+    display: flex;
+    width: 100%;
+    height: 29rem;
+}
+    /* animation 1 gauche */
+#anim1 {
+    background-color: beige;
+    width: 33%;
+}
+
+    /* mon profil centre */
 #monprofil {
-    display:flex;
-    margin: 3rem;
-    color: #dd8b10ee;
-    padding-left: 1.5rem;    
-}
-    
-#monprofil p {
+    width: 34%;
     font-size: 1.5rem;
-    width: 35rem;
+    text-align: left;    
+    color: #eb910cee;
 }
-    
-#monprofil #t2 {
-        font-weight: bolder;  }
+#text2 {
+    font-weight: bolder;  
+    }
 
+    /* animation 2 droite */
+#anim2 {
+    width: 33%;
+    background-image: url("mountain2.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    animation: 5s paralax infinite;  
+}
+@keyframes paralax {
+    100% {
+    background-position: 0 100%,
+    0px 25%,
+    500px 50%,
+    1000px 100%,
+    400px 0; 
+        }  
+}
+
+/* section mon CV */
 #moncv {
-    position: relative;
-    left: 30rem;
-    top: 3rem; }
-
-#mail {
-    font-size: 2rem;
-    position:relative;
-    top: 3rem;
-    left: 12rem;
-    color: white;
-    overflow: visible;  }
-
-#mail .message {
     position: absolute;
-    font-size: 5rem;
-    left:28rem;
-    top: 10rem;
-    text-align: center;
-    vertical-align: middle;
-    list-style-type: none;  }
+    left: 30rem;
+    top: 13%; 
+    opacity: 0.85;
+}
 
-#mail .message #name {
+/* section contacts */
+.message {
+    display: flex;
+}
+#monmail {
+    position: absolute;
+    top: 550px;
+    left: 730px;
+    height: 29rem;
+    color: white;
+    font-size: 3.5rem;
+    text-align: center;
+    list-style-type: none;  
+}
+#name {
     background-image: linear-gradient(to bottom right,
     rgba(255, 255, 0, 0.74) 25%,
     black 50%,
     blue 75% );
-    animation: clignote 1.5s ease-in infinite;  }
-
-#mail .message #tel { text-decoration: underline;  }
-
-#mail .message #msg {  
-    position: absolute;
-    left: 12rem;
-    top: 25rem;
-    text-decoration: none ;  }
-
+    animation: clignote 1.5s ease-in infinite;  
+}
+#msg {  
+    padding-top: 50px;
+    left: 23%;
+    text-decoration: underline;
+}
 @keyframes clignote {  
     50% { opacity: 0.3; }
 }
