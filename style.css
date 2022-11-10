@@ -28,7 +28,8 @@ body {
     blue 75% );
     color:white;
 }
-    /* style particulier contacts */
+
+/* style contacts */
 .menu2 {
     display:block;
     float: right;
@@ -37,6 +38,7 @@ body {
     font-size: 2rem;
     list-style-type: none; 
 }
+
 .menu2 li:hover {  
     opacity: 0.5;
 }
@@ -47,13 +49,30 @@ body {
     width: 100%;
     height: 29rem;
 }
-    /* animation 1 gauche */
-#anim1 {
-    background-color: beige;
-    width: 33%;
+
+/* animation 1 gauche */
+#anim1 {   
+    color: white;
+    font-size: 3rem;
+    width: 633px;
+    animation: 10s linear infinite alternate slidein;
+}
+@keyframes slidein {
+    25% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: blue;
+    }
+    100% {
+        color: white;
+    }
 }
 
-    /* mon profil centre */
+/* mon profil centre */
 #monprofil {
     width: 34%;
     font-size: 1.5rem;
@@ -64,23 +83,10 @@ body {
     font-weight: bolder;  
     }
 
-    /* animation 2 droite */
+/* animation 2 droite */
 #anim2 {
     width: 33%;
-    background-image: url("mountain2.jpg");
-    background-repeat: repeat-x;
-    background-attachment: fixed;
-    animation: 5s paralax infinite;  
-}
-@keyframes paralax {
-    100% {
-    background-position: 0 100%,
-    0px 25%,
-    500px 50%,
-    1000px 100%,
-    400px 0; 
-        }  
-}
+       }
 
 /* section mon CV */
 #moncv {
@@ -90,11 +96,9 @@ body {
     opacity: 0.85;
 }
 
-/* section contacts */
-.message {
-    display: flex;
-}
+/* contacts */
 #monmail {
+    display: flex;
     position: absolute;
     top: 550px;
     left: 730px;
@@ -117,5 +121,5 @@ body {
     text-decoration: underline;
 }
 @keyframes clignote {  
-    50% { opacity: 0.3; }
+    100% { opacity: 0.3; }
 }

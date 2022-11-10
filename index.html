@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="style.css" />
     <!-- Préchargement du script JS -->
     <link rel="preload" href="main.js" as="script" />
-    
     <title>Ma page d'accueil</title>            
-    
 </head>
 
 <body>
@@ -39,26 +36,30 @@
     <div class="menu2">
         <li onclick="mailing()">Contacts</liclass=>
     </div>
+    <!-- fin de section navigation -->
 
     <!-- image -->
     <div class="image" style="padding-top: 15px;">
         <img src="sunrise.jpg" />
     </div>
 
+    <!-- section container -->
     <section class="container">
         <!-- animation 1 gauche -->
-        <canvas id="anim1"></canvas>
+        <div>
+            <p id="anim1">texte</p>
+        </div>
 
-        <!-- Section MON PROFIL -->
+        <!-- MON PROFIL -->
         <div id="monprofil" style="opacity: 0">
         <p>
         En reconversion professionnelle, je me forme au métier de développeur
         d'applications. Je suis curieux et volontaire, créatif et passionné. Je
         code depuis mon adolescence en parallèle d'une première partie de
         carrière tournée vers la relation d'aide. Je me forme aux langages
-        Python et PHP pour le <em>Back</em> et au HTML5 / CSS3 / JS pour la
-        partie <em>Front</em>. J'utilise également MySQL, le framework
-        <em>Django</em>, la librairie <em>react.Js</em> et le CRM Bootstrap 5 
+        Python 3 et PHP 8 pour le <em>Back</em> et au HTML5 / CSS3 / JS pour la
+        partie <em>Front</em>. J'utilise également MySQL, les frameworks
+        <em>Django</em> et <em>Flask, React Native et Bootstrap 5</em>
         pour le développement Web.
         </p>
         <p id="text2">
@@ -68,10 +69,18 @@
         véhiculé et disponible de suite à temps plein.
         </p>
         </div>
-    
+
+        <!-- section CONTACTS -->
+        <div id="monmail" style="display:none">
+          <li id="name">Franck ROCHETTE</li>
+          <li>06.22.98.53.37</li>
+          <a id="msg" href="mailto:rochette.franck@gmail.com">Message</a>
+        </div>
+        
         <!-- animation 2 droite  -->
-        <canvas id="anim2"></canvas>
+        <div id="anim2"></div>
     </section>
+    <!-- fin de section container -->
 
     <!-- section MON CV -->
     <section class="cv">
