@@ -1,0 +1,63 @@
+
+/* gestion animation text */
+.wrapper {
+    position: absolute;  /* position de l'animation dans le menu */ 
+    top: 47px;
+    left: 130px;    
+}
+
+/* cache liste */
+.wrapper .dynamic {
+    line-height: 90px;
+    margin-left: -30px;
+    height: 90px;
+    overflow: hidden;
+
+}
+
+/* couleur liste, style et posiion */
+.dynamic .item {
+    list-style: none;
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    top: 10px;
+    font-weight: bolder;
+    user-select: none;
+    animation: scroll 6s steps(3) infinite;
+    
+    /* curseur- couleur,position,  */
+    &::after {
+    content: "";
+    position:absolute;
+    left: 10px;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid white;
+    background-color: black;
+    animation: typing 2s steps(6) infinite;
+    };
+    &:nth-child(1) {
+        color: rgb(1, 171, 250);
+    }
+    &:nth-child(2) {
+        color: white;
+    }
+    &:nth-child(3) {
+        color: yellow;
+    }
+}
+
+/* animation scroll */
+@keyframes scroll {
+    100% {  
+        top: -270px;
+    }        
+}
+
+/* animation curseur */
+@keyframes typing {
+    40%,
+    60% {  left: calc(100%);   }
+    100% { left: 0;  }
+}

@@ -1,0 +1,68 @@
+
+/* gestion du menu */
+#menu {
+    margin: 20px;
+    list-style-type: none;
+    border: 2px solid rgb(0, 132, 255);
+    border-radius: 8%;
+    max-width: 350px;    
+    min-height: 800px;
+    background-color: rgb(0, 0, 0);
+}
+
+nav ul li {
+    user-select: none; /* interdit selection */ 
+    position: relative; /* position de ul dans la boite */
+    top: 190px;
+    left: -50px;
+    --c: rgba(35, 212, 243, 0.8);
+    color: var(--c);   /* couleur texte item */
+    font-size: 1.2rem;    /* taille texte item */
+    border: 0.2em solid var(--c); /* bordure */
+    border-radius: 25px;   /* arrondi de bordure */
+    box-shadow: 15px -7px 7px rgba(75, 155, 221, 0.4); /* ombre de l'item */
+    width: 14em;   /* largeur de l'item */
+    height: 3em;   /* hauteur de l'item */
+    text-transform: uppercase; /* texte item en majuscule */
+    font-weight: bold;   /* texte item en gras */
+    font-family: Digital-7 Mono;  
+    letter-spacing: 0.1em;   /* espacement entre les lettres */
+    text-align: right;  /* texte item aligné à droite */
+    line-height: 3em;     
+    overflow: hidden;   /* cache le dépassement du point */
+    z-index: 1;  
+    transition: 0.3s; /* tps de transition au hover */
+    margin: 40px;   /* espace entre les items du menu */
+    padding-right: 10px; /* espace entre texte item et fin de bordure */
+ }
+              
+nav ul li span {
+    position: absolute; 
+    width: 15%;   /* largeur du point */
+    height: 100%;   /* hauteur du point */
+    background-image: linear-gradient(to bottom right,
+    yellow 25%,
+    black 50%,
+    blue 75% );
+    transform: translateY(90%);  /* déplaement du point sur l'axe y */
+    border-radius: 100%;  
+    left: calc((var(--n) - 0.8) * 15%);
+    transition: 0.3s;  /* tps de surgissement du point */
+}
+
+ /* au survol: surbrillance du texte , efface bordure, et ombre */
+nav ul li:hover {  
+    color:rgb(110, 234, 250);
+    border: transparent;
+    box-shadow: none;
+    font-style: italic;
+    cursor: grab;
+}
+
+nav ul li:hover span {  
+    transform: translateY(0%) ;
+}
+
+nav ul li span:nth-child(1) { 
+    --n: 1; 
+}

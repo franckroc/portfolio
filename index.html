@@ -1,109 +1,113 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="fr FR">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Préchargement du script JS -->
-    <link rel="preload" href="main.js" as="script" />
-    <title>Ma page d'accueil</title>            
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franck ROCHETTE - CV en ligne</title>
+    <link rel="stylesheet" href="./static/style/portfolio.css">
+    <link rel="stylesheet" href="./static/style/menu.css">
+    <link rel="stylesheet" href="./static/style/CSSAnimationText.css">
+    <link rel="stylesheet" href="./static/style/contact.css">
+    <link rel="stylesheet" href="./static/style/drag.css">
+
 </head>
 
 <body>
 
-    <script src="main.js"></script>
-    
-    <!-- section navigation -->
-    <section class="menu">
-        <div class="menu">
-            <li onclick="displayText()">PROFIL</li>
+    <header>PORTFOLIO</header>
+    <!-- section menu et animation -->
+    <div id="side-menu">
+        <div class="wrapper">
+            <ul class="dynamic">
+                <li class="item"><span>Eat !</span></li>
+                <li class="item"><span>Sleep !</span></li>
+                <li class="item"><span>Code !</span></li>
+            </ul>
         </div>
 
-        <div class="menu">
-            <li onclick="displayCv()">CV</liass=>
-        </div>
-
-        <div class="menu">
-            <li>PROJETS</li>
-        </div>
-
-        <div class="menu">
-            <li id="realisation">REALISATIONS</li>
-        </div>
-    </section>
-
-    <div class="menu2">
-        <li onclick="mailing()">Contacts</liclass=>
-    </div>
-    <!-- fin de section navigation -->
-
-    <!-- image -->
-    <div class="image" style="padding-top: 15px;">
-        <img src="sunrise.jpg" />
+        <nav id="menu">
+            <ul>
+                <li id="aboutme">A propos de moi<span></span></li>
+                <li id="realisation">Jouez<span></span></li>
+                <li id="cv">CV en ligne<span></span></li>
+                <li id="contact">Contacts<span></span></li>
+            </ul>
+        </nav>
     </div>
 
-    <!-- section container -->
-    <section class="container">
-        <!-- animation 1 gauche -->
-        <div>
-            <p id="anim1">texte</p>
+    <main>
+        <div id="about" style="opacity: 0;">
+        <!-- section about me -->
+        <div class="container-img" >
+            <div class="container-modal">
+                <img class="photo" src="./static/img/climb.jpg" alt="grimpeur" width="350" height="300">
+                <p id="txt1">Force et souplesse<br>Equilibre et concentration<br>Détermination<br>Progresser dans la verticalité</p>
+            </div>
+            <div class="container-modal">
+                <img class="photo" src="./static/img/guitare.webp" alt="guitare" width="350" height="300">
+                <p id="txt2">Evasion et détente<br>Partage et rencontre<br>Ecoute et improvisation<br>Composer et créer</p>
+            </div>
+            <div class="container-modal">
+                <img class="photo" src="./static/img/code.jpg" alt="code" width="350" height="300">
+                <p id="txt3">Rigueur et organisation<br>Concentration et écoute<br>Découverte et apprentissage<br>Coder par passion</p>
+            </div>
+        </div>
+        <a href="#" id="ret">retour</a>
         </div>
 
-        <!-- MON PROFIL -->
-        <div id="monprofil" style="opacity: 0">
-        <p>
-        En reconversion professionnelle, je me forme au métier de développeur
-        d'applications. Je suis curieux et volontaire, créatif et passionné. Je
-        code depuis mon adolescence en parallèle d'une première partie de
-        carrière tournée vers la relation d'aide. Je me forme aux langages
-        Python 3 et PHP 8 pour le <em>Back</em> et au HTML5 / CSS3 / JS pour la
-        partie <em>Front</em>. J'utilise également MySQL, les frameworks
-        <em>Django</em> et <em>Flask, React Native et Bootstrap 5</em>
-        pour le développement Web.
-        </p>
-        <p id="text2">
-        Je recherche un emploi en alternance en contrat de professionnalisation
-        pour articuler mes connaissances avec une pratique professionnelle. Je
-        recherche le travail d'équipe mais je sais aussi être autonome. Je suis
-        véhiculé et disponible de suite à temps plein.
-        </p>
-        </div>
-
-        <!-- section CONTACTS -->
-        <div id="monmail" style="display:none">
-          <li id="name">Franck ROCHETTE</li>
-          <li>06.22.98.53.37</li>
-          <a id="msg" href="mailto:rochette.franck@gmail.com">Message</a>
-        </div>
-        
-        <!-- animation 2 droite  -->
-        <div id="anim2"></div>
-    </section>
-    <!-- fin de section container -->
-
-    <!-- section MON CV -->
-    <section class="cv">
-        <div id="moncv" style="display: none">
+    <!-- section cv -->
+        <div id="moncv" style="display: none;">
             <object
                 type="application/pdf"
-                data="cv.pdf"
-                width="900"
+                data="./static/docs/CV_FRANCKROCHETTE.pdf"
+                width="1100"
                 height="800">
             </object>
         </div>
-    </section>
 
-    <!-- section CONTACTS -->
-    <section class="message">
-        <div id="monmail" style="display:none">
-            <li id="name">Franck ROCHETTE</li>
-            <li>06.22.98.53.37</li>
-            <a id="msg" href="mailto:rochette.franck@gmail.com">Message</a>
+        <!-- section mon contact -->
+        <div class="moncontact" style="display: none; ">
+            <img id="photo" src="./static/img/FR.jpg" alt="photo franck rochette" >
+            <section id="contact-content">
+                <p>FRANCK ROCHETTE</p>
+                <p>+33 6.22.98.53.37</p>
+                <a id="msg" href="mailto:rochette.franck@gmail.com">Mail me</a>
+            </section>
         </div>
-    </section>
 
-    <footer></footer>
+        <!-- section realisation -->
+        <div id="jeu" style="display: none;"> 
+            <section>
+                <div class="droppable" id="dropzone">Zone de dépôt</div>
+                <div class="chrono">Time:<span id="tps"></span></div>
+            </section>
+        
+            <section>
+                <div id="dragzone">Zone d'origine</div>
+                <div class="mot"><strong>Mot(s) trouvé(s): </strong><ul id="list"></ul>  </div>
+            </section>
+    
+            <button id="start" onclick="getLetters()">Démarrez</button>
+            <button id="btn" onclick="verifyElements()"><strong>Vérifiez !</strong></button>
+    
+            <section class="score">
+                <div id="re1">Résultat:<span id="result"></span></div>
+                <p id="re2"> Score:<span id="score"></span></p>
+            </section>
+    
+            <div class="best">
+                <div>Meilleur mot:<span id="bestword"></span></div><br/>
+                <div>Meilleur score:<span id="bestscore"></span></div>
+            </div>
+            <a href="#" id="ret2">Quittez !</a>
 
-</body>
+        </div>
+    
+        <script type="text/javascript" src="./static/script/drag.js"></script>
+        <script type="text/javascript" src="./static/script/folio.js"></script>
+        </div>
+    </main>
+
+
+</body>  
 </html>

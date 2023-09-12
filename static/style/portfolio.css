@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    background-image: url("../img/blackBG.jpg");
+    overflow: hidden;
+     }
+
+/* header - ligne de dégradé bleu */
+header {
+    background-image: linear-gradient(to bottom,
+    rgb(4, 190, 247) 25%,
+    rgb(4, 100, 190) 75%
+    );
+    width: 100%;
+    height: 1.5em;
+    text-align: center;
+}
+
+#moncv {
+    position: absolute;
+    left: 30rem;
+    top: 5%; 
+    opacity: 0.85;
+}
+
+.container-img {
+    display: flex;
+    position:absolute;
+    left: 450px;
+    top: 180px;
+}
+
+
+.container-modal {
+    display: flex;
+    flex-direction: column;    
+    margin-right: 20px;
+    border: 2px solid white;
+    min-height: 600px;
+}
+
+.container-modal p {
+    position: absolute;
+    color: white;
+    opacity: 0;
+    top: 15px;
+    font-size: 1.7em;
+    text-align: justify;
+    user-select: none;
+}
+
+#txt1 {  left:15px;   }
+#txt2 {  left:390px;  }
+#txt3 {  left: 760px; }
+
+.container-modal:hover .photo{
+    transition: transform 1s;
+    transform: translateY(246px);
+}
+.container-modal:hover #txt1 {
+    transition: opacity 3s ease;
+    opacity: 1;
+}
+.container-modal:hover #txt2 {
+    transition: opacity 3s ease;
+    opacity: 1;
+}
+.container-modal:hover #txt3 {
+    transition: opacity 3s ease;
+    opacity: 1;
+}
+#ret {
+    position: absolute;
+    top: 780px;
+    left: 50%;
+    font-size: 3em;
+}
